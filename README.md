@@ -1,23 +1,36 @@
-# Nakhsha Builders — a scroll-directed architectural experience
+# Nakhsha Builders — commercial architecture, in motion
 
-A cream-and-beige architectural website with Nakhsha’s **exact official preloader logo**, a genuine 3D building study, distinct published photography, and project-led enquiry tools.
+A cream-and-beige website with a scroll-directed 3D opening, large photographic project showcases, and separate pages for Projects, About and Contact.
 
-![3D architectural opening](docs/desktop-preview.png)
+![Architectural opening](docs/desktop-preview.png)
 
-## Motion preview
+## Pages
 
-Actual browser recording of the model changing position, rotating, separating its floors and revealing feature descriptions as the page scrolls.
+| Page | Route | Experience |
+| --- | --- | --- |
+| Home | `/` | Real 3D architectural study with four scroll chapters, warm contour fields, traced floor plan and animated portfolio |
+| Projects | `/projects/` | Oversized typography, full-width and paired photographic cards, hospitality/institutional filters |
+| Case studies | `/projects/<project-slug>/` | Full-width cover, published project details, five-photo keyboard/touch gallery, film links where verified, next-project navigation |
+| About | `/about/` | Nakhsha team photograph, company milestones and delivery approach |
+| Contact | `/contact/` | Dedicated consultation form with project-context handoff and the retained verification backend |
 
-![Actual 3D scroll-story recording](docs/motion-preview.gif)
+The six case studies cover Mysore Union, Cosmopolitan Club, Continental Inn, Iconic Resto Pub, MICA and Rahul Cafe. Header, mobile menu and footer links navigate between actual pages. Relative links support deployment at a domain root or beneath a GitHub Pages repository prefix. Deep URLs are ordinary directory indexes and need no SPA rewrite.
 
-## What changed
+![Projects page](docs/projects-preview.png)
 
-- The loader now uses the full official Nakhsha artwork, unchanged: gold symbol, registered wordmark and family line. Source: https://nakhsha.in/assets/images/nakhsha-preloader-logo.png?v=20260925-preloader-text-removed-1. The embedded bytes were checked against the original asset.
-- The hero is actual volumetric geometry: 23 tower levels, curved floor fins, glazing, mullions, a stepped podium, roof volumes, planting, lighting and shadows. It is an illustrative architectural concept, clearly labelled, and does not represent an existing Nakhsha development.
-- Four scroll chapters change the model’s camera/orientation and reveal descriptions and projected detail markers: overall form, arrival, separated floor structure and terraces. Viewpoint buttons offer direct navigation, including manual views on short screens and reduced-motion devices.
-- The former repeated tower photograph is removed from every section. The process chapter uses a Continental Inn lobby photograph; the closing chapter uses the Iconic Resto Pub night exterior. Real project photographs continue throughout the portfolio.
-- Project filters select all, hospitality or institutional work. Five-photo galleries support thumbnails, arrows, swipe and keyboard navigation. Enquiry links carry the selected project context into the contact form without overwriting an existing message.
-- Warm contours, the traced floor plan, spring entrances, live photographic plates and the original warm architectural composition remain. Offscreen/covered 3D rendering pauses to preserve resources.
+## Motion and identity
+
+The intro follows the dedicated Nakhsha Builders reference: a clipped, spring-driven logo reveal, drafting lines, then three vertical shutters. It uses the exact unmodified Builders logo from `https://framerusercontent.com/images/fPEtmK8kth6g5lYp7BXkMvceeoU.png`, published on https://nakhshabuilders.com/. The first visit gives the branding room to appear; subsequent pages use a shorter transition. Reduced-motion preferences skip the intro.
+
+The home model is actual Three.js geometry: 23 tower levels, curved floor fins, glazing, mullions, a stepped podium, roof volumes, planting, lighting and shadows. Its camera, orientation and floor separation respond to the scroll chapters. Viewpoint buttons offer direct controls, including on short screens and reduced-motion devices. This is a labelled illustrative architectural study, not a built Nakhsha development.
+
+Actual browser recording, sped up for the preview.
+
+![Actual browser recording](docs/motion-preview.gif)
+
+Large Inter headings and Manrope body text on the new pages take cues from the Builders reference. Scroll reveals, photographic parallax, gallery transitions and native page transitions extend the motion across the site. The earlier cinematic home composition, warm animated contours, live photographic plates and blueprint chapter remain. Offscreen or covered WebGL rendering pauses.
+
+Thirty distinct published project photographs are available. The process chapter uses a Continental Inn lobby; the closing chapter uses the Iconic Resto Pub exterior. The About page uses Nakhsha’s published team photograph. Interface surfaces stay cream, beige, warm stone and bronze.
 
 ## Run
 
@@ -27,60 +40,56 @@ Python 3.10+, no package dependencies:
 python server.py --port 3000
 ```
 
-This serves the prebuilt site and the verified consultation API from one origin. `index.html` and the identical `standalone.html` embed all required local imagery, fonts, Three.js 0.185.0, Lenis 1.3.26 and the model geometry code. No frontend build, remote model, runtime CDN request or package installation is required to view the page.
+This serves all prebuilt pages and the consultation API from one origin. Every HTML page embeds its required local imagery, branding and fonts. The home also embeds Three.js 0.185.0 and Lenis 1.3.26; inner pages omit those libraries. No runtime CDN, remote 3D model, package installation or frontend build is required to view the prebuilt site.
 
-A static-only host cannot run the verified form API. Its form offers an explicitly labelled email-draft action and the official contact-page link, without claiming a message was sent. Run/deploy the included backend for direct verified submissions. This code update does not deploy the site to a public domain.
+`standalone.html` is an identical copy of the home page. Keep the generated page directories alongside it for navigation to Projects, About, Contact and the case studies.
+
+Static-only hosting cannot run the consultation API. The form then offers a clearly labelled **Prepare email enquiry** action, without claiming a message was sent. Deploy the included backend for direct verified submissions. Pushing the code does not deploy it to a public domain.
 
 ## Consultation flow
 
-The form collects name, phone, email, location, project type, budget, message and contact consent, matching the published Nakhsha form.
+The dedicated Contact page retains the original form fields and verification controller. Case-study enquiry links use a whitelisted project slug to prefill the message and display its context; an existing message is preserved.
 
-The companion backend maintains a separate official PHP session for each browser. It fetches current public verification tokens server-side, relays **user-requested** WhatsApp OTP send/verify actions, and submits to the official consultation handler only after successful mobile verification and human confirmation. Session tokens and cookies stay in server memory and are never embedded in HTML or returned to the browser.
+The backend maintains a separate official PHP session for each browser. It fetches current public verification tokens server-side, relays user-requested WhatsApp OTP actions, and submits to the official handler after mobile verification and human confirmation. Tokens and cookies stay in server memory. Success requires the recognised official delivery receipt; uncertain results are not shown as success or blindly retried.
 
-There are no automatic OTP sends or automatic enquiries. Server validation, same-origin checks, bounded payloads, session expiry, resend/verification limits and duplicate protection are included. Success is shown only after the official handler returns its recognised delivery receipt; an uncertain result is not reported as success or blindly retried.
+There are no automatic OTP sends or automatic enquiries. Same-origin checks, bounded payloads, session expiry, verification limits and duplicate protection remain. The public, undocumented official PHP interface may change; visible fallback contact options remain available. For HTTPS hosting, use a reverse proxy with `X-Forwarded-Proto: https` or set `NAKHSHA_SECURE_COOKIE=1` so the session cookie is Secure.
 
-The official PHP interface is public but undocumented and may change; failures provide a visible alternative instead of claiming delivery. For HTTPS hosting, use a reverse proxy with `X-Forwarded-Proto: https` or set `NAKHSHA_SECURE_COOKIE=1` so the session cookie is Secure. The Python process must remain running for direct submissions.
-
-**Verification performed:** live read-only bootstrap against the official site; 10 mocked backend tests; actual-page mocked mobile tests covering consent, validation, OTP errors/recovery, human confirmation, confirmed/uncertain delivery and static fallback. **No real OTP or enquiry was sent during development**, so live message delivery is not claimed as tested.
+Development form tests use mocked API responses. **No real OTP or enquiry was sent.** Live message delivery is not claimed as tested.
 
 ## Authoring
 
-- `src/index.template.html`, `src/site.css`, `src/site.js`: layout, chapters, navigation, galleries and motion.
-- `scripts/architectural-model.js`: real Three.js geometry, physical materials, lighting, framing, floor separation and projected hotspots; no private animation loop.
-- `scripts/contour-field.js`, `scripts/drafting-canvas.js`: warm canvas helpers sharing the page ticker.
-- `src/contact.css`, `scripts/contact-form.js`, `server.py`: retained consultation experience and session-preserving backend.
-- `project-data.json`, `project-media.json`: verified content, photo provenance and official film links.
+- `src/index.template.html`, `src/site.css`, `src/site.js`: the cinematic home.
+- `src/shared-*.html`, `src/shared.css`, `src/shared.js`: shared brand intro, navigation and page shell.
+- `src/projects.template.html`, `src/project-detail.template.html`, `src/pages.css`, `src/pages.js`: collection, case studies, filters, photo parallax and galleries.
+- `src/about.template.html`, `src/about.css`: company page.
+- `src/contact-page.template.html`, `src/contact-page.css`, `src/contact.css`, `scripts/contact-form.js`: dedicated contact layout and retained verification UI.
+- `scripts/architectural-model.js`, `scripts/contour-field.js`, `scripts/drafting-canvas.js`: model and canvas helpers.
+- `server.py`: consultation bridge and static server.
+- `project-data.json`, `project-media.json`: published content and photograph provenance.
+- `scripts/export.py`: deterministic standard-library generator for all ten pages and the standalone home copy.
 
-After editing:
+After editing sources:
 
 ```sh
 python scripts/export.py
 ```
 
-Backend checks (mocked; do not send production enquiries):
+Run backend checks without sending production enquiries:
 
 ```sh
 python -m unittest discover -s tests -v
 ```
 
-The delivered HTML files are prebuilt and can be opened/served immediately.
+## Sources and licenses
 
-## Published work and imagery
+Project content and photography come from https://nakhsha.in/nakhsha-builders and the https://nakhshabuilders.com/ project pages recorded in the JSON files. Four projects have verified official films; the other two do not display a film link. Unpublished floor areas are labelled “Not published.” Company contact information follows the verified Nakhsha.in details already used by this site.
 
-Project data comes from https://nakhsha.in/nakhsha-builders and the original https://nakhshabuilders.com project pages recorded in the JSON files. The collection covers Mysore Union, Cosmopolitan Club, Continental Inn, Iconic Resto Pub, MICA and Rahul Cafe. Thirty published photographs are embedded. Four projects have verified official films; no film link is invented for the others.
-
-The 3D concept is created from geometry, not a photograph or screenshot billboard. Source factory statistics show 23 tower floors, 29 mesh objects, 13 instanced batches and approximately 107,560 triangles; the tested renderer reported 58 draw calls with desktop shadows and 31 on mobile. These are implementation statistics, not claims about a built project.
-
-Nakhsha’s official logo is retained in its original colours in the preloader. Interface colours remain cream, beige, warm stone and bronze. Oswald/Space Grotesk licenses are in `assets/`; pinned library MIT notices are in `vendor/`, with the libraries extracted from SHA512-verified npm packages.
+The Builders preloader artwork is saved as `assets/builders-preloader-logo.png`. The team photograph comes from `https://nakhsha.in/assets/images/media/leadership/Group.webp`. Font licenses are retained in `assets/`; pinned library MIT notices are in `vendor/`. The libraries were extracted from SHA512-verified npm packages.
 
 ## Validation
 
-Chromium checks passed for exact logo-byte embedding, genuine 3D geometry rendering, wheel-driven progress, all four model poses with readable descriptions, projected detail markers, sector filters, five-photo galleries, project-specific enquiry handoff, and useful WebGL-disabled fallback.
+The build completes for all ten pages with no unresolved placeholders or broken internal links. Ten mocked backend tests pass. Browser checks cover the original-logo intro, real WebGL rendering and four viewpoints, Home → Projects → case study → contextual Contact navigation, filters, gallery arrows/thumbnails/Escape, mobile menus, direct deep links, Back navigation, reduced motion and WebGL fallback.
 
-Layouts were checked at 375×667, 390×844, 768×1024, 1280×720, 1440×1000 and 1920×1080 with no horizontal overflow. Real touch tests verify the roof clears metadata, controls remain reachable, short screens have no blank scroll runway, and reduced-motion viewers retain manual viewpoint controls. Normal runs had no page or console errors, and no external asset requests.
+Responsive checks cover phone, tablet and desktop. Browser form checks exercise field validation, consent, mocked OTP verification, human confirmation, receipt-only success, uncertain delivery and static email-draft fallback. No production verification messages or enquiries are sent by these checks.
 
-The verified contact flow is unchanged; actual-page API tests are mocked, with no production OTP or enquiry sends.
-
-## Screenshots
-
-[Official preloader](docs/preloader-preview.png) · [Desktop](docs/desktop-preview.png) · [Phone](docs/mobile-preview.png) · [Arrival](docs/model-view-1.png) · [Structure](docs/model-view-2.png) · [Terraces](docs/model-view-3.png) · [Distinct process imagery](docs/process-preview.png) · [Distinct closing imagery](docs/footer-preview.png) · [Projects](docs/projects-preview.png) · [Contact](docs/contact-preview.png)
+[Preloader](docs/preloader-preview.png) · [Home](docs/desktop-preview.png) · [Phone](docs/mobile-preview.png) · [Projects](docs/projects-preview.png) · [Project detail](docs/project-detail-preview.png) · [Contact](docs/contact-preview.png) · [Consultation form](docs/contact-form-preview.png) · [About](docs/about-preview.png)
