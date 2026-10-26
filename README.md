@@ -1,28 +1,23 @@
-# Nakhsha Builders — the architectural layout, in cream and beige
+# Nakhsha Builders — a scroll-directed architectural experience
 
-The previous interactive-tower composition is restored: the central architectural subject, bracketed panels, pinned sheets, traced floor plan, stepped photographic timeline, process strip and framed closing chapter. Its black/cyan styling is replaced throughout by **cream, beige, warm stone, bronze and readable brown text**.
+A cream-and-beige architectural website with Nakhsha’s **exact official preloader logo**, a genuine 3D building study, distinct published photography, and project-led enquiry tools.
 
-![Restored tower layout in cream and beige](docs/desktop-preview.png)
+![3D architectural opening](docs/desktop-preview.png)
 
 ## Motion preview
 
-This recording shows the actual browser experience, including the tower interaction, traced floor plan and live photographic plates.
+Actual browser recording of the model changing position, rotating, separating its floors and revealing feature descriptions as the page scrolls.
 
-![Actual animation preview](docs/motion-preview.gif)
+![Actual 3D scroll-story recording](docs/motion-preview.gif)
 
-## Animation throughout
+## What changed
 
-- A warm architectural loader and staggered letter/word entrances.
-- A WebGL crown-to-base tower reveal, bronze structural scan, cursor-trail reveal, subtle depth, gentle floating and an idle sweep on touch screens.
-- Continuously evolving contour fields and the original pinned-sheet recession, recolored in warm neutrals.
-- A six-second bronze floor-plan trace, moving grid, reticle, hub rings and pulsing milestones.
-- Living project plates: parallax, gentle image movement, rotating published photographs and spring-driven photo crossfades while visible. Hover/focus pauses the relevant plate.
-- Five-photo project dialogs with next/previous, keyboard, swipe and thumbnail navigation.
-- Cycling process highlights and a scroll-responsive closing architectural figure.
-
-The global motion control and system reduced-motion preference are retained. On reduced motion, the page uses normal scrolling and still, manually browsable galleries. Too-tall screens also use normal flow so actions remain reachable.
-
-The working consultation form and the verified project galleries from the newer version remain included.
+- The loader now uses the full official Nakhsha artwork, unchanged: gold symbol, registered wordmark and family line. Source: https://nakhsha.in/assets/images/nakhsha-preloader-logo.png?v=20260925-preloader-text-removed-1. The embedded bytes were checked against the original asset.
+- The hero is actual volumetric geometry: 23 tower levels, curved floor fins, glazing, mullions, a stepped podium, roof volumes, planting, lighting and shadows. It is an illustrative architectural concept, clearly labelled, and does not represent an existing Nakhsha development.
+- Four scroll chapters change the model’s camera/orientation and reveal descriptions and projected detail markers: overall form, arrival, separated floor structure and terraces. Viewpoint buttons offer direct navigation, including manual views on short screens and reduced-motion devices.
+- The former repeated tower photograph is removed from every section. The process chapter uses a Continental Inn lobby photograph; the closing chapter uses the Iconic Resto Pub night exterior. Real project photographs continue throughout the portfolio.
+- Project filters select all, hospitality or institutional work. Five-photo galleries support thumbnails, arrows, swipe and keyboard navigation. Enquiry links carry the selected project context into the contact form without overwriting an existing message.
+- Warm contours, the traced floor plan, spring entrances, live photographic plates and the original warm architectural composition remain. Offscreen/covered 3D rendering pauses to preserve resources.
 
 ## Run
 
@@ -32,9 +27,9 @@ Python 3.10+, no package dependencies:
 python server.py --port 3000
 ```
 
-This serves the prebuilt website and the verified consultation API from the same origin. `index.html` and the identical `standalone.html` embed all local imagery, fonts, Three.js 0.185.0 and Lenis 1.3.26; viewing them requires no frontend build, installation or CDN downloads.
+This serves the prebuilt site and the verified consultation API from one origin. `index.html` and the identical `standalone.html` embed all required local imagery, fonts, Three.js 0.185.0, Lenis 1.3.26 and the model geometry code. No frontend build, remote model, runtime CDN request or package installation is required to view the page.
 
-A static-only host cannot run the verified form API. It instead offers an explicitly labelled email-draft action and the official-form link, without claiming an enquiry was sent. Run/deploy the included backend for direct verification and submission. This code update does not publish the website to a public domain.
+A static-only host cannot run the verified form API. Its form offers an explicitly labelled email-draft action and the official contact-page link, without claiming a message was sent. Run/deploy the included backend for direct verified submissions. This code update does not deploy the site to a public domain.
 
 ## Consultation flow
 
@@ -48,13 +43,13 @@ The official PHP interface is public but undocumented and may change; failures p
 
 **Verification performed:** live read-only bootstrap against the official site; 10 mocked backend tests; actual-page mocked mobile tests covering consent, validation, OTP errors/recovery, human confirmation, confirmed/uncertain delivery and static fallback. **No real OTP or enquiry was sent during development**, so live message delivery is not claimed as tested.
 
-## Edit and build
+## Authoring
 
-- `src/index.template.html`, `src/site.css`, `src/site.js`: restored composition and warm motion system.
-- `src/contact.css`, `scripts/contact-form.js`: retained consultation form styling and integration.
-- `scripts/contour-field.js`, `scripts/drafting-canvas.js`: warm animated canvas helpers, sharing the page ticker.
-- `project-data.json`, `project-media.json`: verified content, source URLs, videos and photographs.
-- `server.py`, `tests/test_contact.py`: session-preserving backend and mocked tests.
+- `src/index.template.html`, `src/site.css`, `src/site.js`: layout, chapters, navigation, galleries and motion.
+- `scripts/architectural-model.js`: real Three.js geometry, physical materials, lighting, framing, floor separation and projected hotspots; no private animation loop.
+- `scripts/contour-field.js`, `scripts/drafting-canvas.js`: warm canvas helpers sharing the page ticker.
+- `src/contact.css`, `scripts/contact-form.js`, `server.py`: retained consultation experience and session-preserving backend.
+- `project-data.json`, `project-media.json`: verified content, photo provenance and official film links.
 
 After editing:
 
@@ -62,24 +57,30 @@ After editing:
 python scripts/export.py
 ```
 
-Backend checks:
+Backend checks (mocked; do not send production enquiries):
 
 ```sh
 python -m unittest discover -s tests -v
 ```
 
-## Content and assets
+The delivered HTML files are prebuilt and can be opened/served immediately.
 
-Project details and photographs come from https://nakhsha.in/nakhsha-builders and the original https://nakhshabuilders.com project pages recorded in the JSON files. The six projects are Mysore Union, Cosmopolitan Club, Continental Inn, Iconic Resto Pub, MICA and Rahul Cafe. Thirty published photographs are embedded. Four projects have verified official films; no film link is invented for the others.
+## Published work and imagery
 
-The central tower is a generated architectural concept, clearly labelled on the page, and is not represented as a built Nakhsha project. Actual project photography is used in the photographic plates and galleries. The official company symbol is masked to the warm palette. Oswald and Space Grotesk licenses are in `assets/`; the two pinned libraries retain MIT notices in `vendor/` and were extracted from SHA512-verified npm packages.
+Project data comes from https://nakhsha.in/nakhsha-builders and the original https://nakhshabuilders.com project pages recorded in the JSON files. The collection covers Mysore Union, Cosmopolitan Club, Continental Inn, Iconic Resto Pub, MICA and Rahul Cafe. Thirty published photographs are embedded. Four projects have verified official films; no film link is invented for the others.
+
+The 3D concept is created from geometry, not a photograph or screenshot billboard. Source factory statistics show 23 tower floors, 29 mesh objects, 13 instanced batches and approximately 107,560 triangles; the tested renderer reported 58 draw calls with desktop shadows and 31 on mobile. These are implementation statistics, not claims about a built project.
+
+Nakhsha’s official logo is retained in its original colours in the preloader. Interface colours remain cream, beige, warm stone and bronze. Oswald/Space Grotesk licenses are in `assets/`; pinned library MIT notices are in `vendor/`, with the libraries extracted from SHA512-verified npm packages.
 
 ## Validation
 
-Independent Chromium checks passed at 1440×1000 desktop, 390×844 touch and 375×667 touch: no horizontal overflow, actual WebGL ready, reachable short-screen CTA, working menus/Escape, five-photo gallery controls, enquiry anchor to the actual form, and reduced-motion normal flow. All major page surfaces were checked as cream/beige, with warm brown text. There were no page or console errors.
+Chromium checks passed for exact logo-byte embedding, genuine 3D geometry rendering, wheel-driven progress, all four model poses with readable descriptions, projected detail markers, sector filters, five-photo galleries, project-specific enquiry handoff, and useful WebGL-disabled fallback.
 
-A timed browser check confirmed the photographic plate changes from PHOTO 01 to PHOTO 02 through the automatic crossfade. The actual-page contact flow was tested with intercepted API responses: field validation, consent, OTP, human confirmation, confirmed/uncertain delivery and the honest static email fallback. No production OTP/enquiry sends were made.
+Layouts were checked at 375×667, 390×844, 768×1024, 1280×720, 1440×1000 and 1920×1080 with no horizontal overflow. Real touch tests verify the roof clears metadata, controls remain reachable, short screens have no blank scroll runway, and reduced-motion viewers retain manual viewpoint controls. Normal runs had no page or console errors, and no external asset requests.
+
+The verified contact flow is unchanged; actual-page API tests are mocked, with no production OTP or enquiry sends.
 
 ## Screenshots
 
-[Desktop](docs/desktop-preview.png) · [Phone](docs/mobile-preview.png) · [Animated plan](docs/blueprint-preview.png) · [Project plates](docs/projects-preview.png) · [Gallery](docs/gallery-preview.png) · [Contact](docs/contact-preview.png)
+[Official preloader](docs/preloader-preview.png) · [Desktop](docs/desktop-preview.png) · [Phone](docs/mobile-preview.png) · [Arrival](docs/model-view-1.png) · [Structure](docs/model-view-2.png) · [Terraces](docs/model-view-3.png) · [Distinct process imagery](docs/process-preview.png) · [Distinct closing imagery](docs/footer-preview.png) · [Projects](docs/projects-preview.png) · [Contact](docs/contact-preview.png)
