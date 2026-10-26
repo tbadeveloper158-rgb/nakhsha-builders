@@ -1,47 +1,80 @@
-# Nakhsha — Built beyond the ordinary
+# Nakhsha Builders — built for what’s next
 
-A cinematic commercial architecture website. Deep forest, muted gold, editorial serif typography, and immersive project photography. Built with native HTML, CSS, JavaScript, SVG, and locally hosted fonts. No build step or runtime dependencies.
+A commercial-architecture adaptation of the supplied **KIMI / GRIDO1 Racing Systems** reference: near-white, black, cyan, Oswald and Space Grotesk, an interactive architectural subject, and five distinct scroll chapters.
 
-![Desktop preview](docs/desktop-preview.png)
+![Desktop architectural stage](docs/desktop-preview.png)
 
-## Run
+## Open the website
+
+`index.html` is a single self-contained HTML file. Images, fonts, Three.js 0.185.0, and Lenis 1.3.26 are embedded. There are **no runtime downloads, package installation, framework, or build step** needed to view it. `standalone.html` is an identical copy retained for convenience.
+
+To serve the page locally:
 
 ```sh
 python -m http.server 3000 --bind 0.0.0.0
 ```
 
-Open the server in your browser. `index.html` is the editable site. `standalone.html` embeds the fonts and photographs for a self-contained version. Regenerate it after edits:
+The page can be hosted on any static HTML host. This repository does not imply that a public website has been deployed.
+
+## How the reference is used
+
+| Supplied reference | Nakhsha implementation |
+| --- | --- |
+| Light hero, condensed title, identity rail and bracketed panels | Architectural stage, Nakhsha identity, commercial metadata, featured project and published milestones |
+| Helmet burn, cursor trail and wireframe scan | Commercial tower texture with a cyan crown-to-base structural reveal, shallow parallax, cursor-trail blueprint reveal and periodic structural scan |
+| One spring/ticker engine and smooth scrolling | Mass-one spring solver with 1ms substeps and capped frame time; all scenes and Lenis driven by one ticker |
+| First two pinned sheets recede under the next layer | Hero and delivery sheets scale to 0.9 and darken to 55%; too-tall screens use normal flow so controls remain reachable |
+| Chequer dissolve into dark instrument map | Deterministic chequer seam, halftone architectural floor plan, six-second cyan trace, four milestones, hub pings and cursor reticle |
+| Stepped-corner photographic timeline | Six published Nakhsha projects, alternate photo plates, center progress thread, rotating marker, parallax and pointer dimming |
+| Light paddock / calendar | Light process chapter, architectural subject, four connected delivery stages |
+| Cyan-edged dark sign-off | 16px cyan edge, inset black panel, contour field, architectural figure and letter-revealed navigation |
+
+The fonts, palette, section hierarchy, framing, geometry, and motion system follow the supplied reference. The racing driver, helmet, race calendar, and racing copy are replaced with commercial architecture and Nakhsha information. The tower is an architectural image with WebGL shader effects, not a navigable volumetric building model.
+
+## Screenshots
+
+- [Desktop opening](docs/desktop-preview.png)
+- [Phone opening](docs/mobile-preview.png)
+- [Architectural instrument stage](docs/blueprint-preview.png)
+- [Project timeline](docs/projects-preview.png)
+- [Closing chapter](docs/footer-preview.png)
+
+## Edit and regenerate
+
+Editable authoring files are in `src/`; project content and provenance are in `project-data.json`. The contour and drafting helpers are in `scripts/` and library sources/licenses in `vendor/`.
+
+After editing, regenerate both self-contained HTML files:
 
 ```sh
 python scripts/export.py
 ```
 
-## Experience
+Only Python’s standard library is required. Three.js and Lenis are embedded through the import map. The vendored libraries were extracted from the official npm tarballs after checking their registry SHA512 integrity. TLS and package verification were retained.
 
-- Full-screen architectural opening with subtle ambient movement and a building-mark loader.
-- Spring-driven, staggered headline reveals and editorial scroll reveals.
-- A pinned, full-screen project sequence on desktop, with spring-driven photographic dissolves, subtle image movement, project navigation, and detail dialogs.
-- Individual project chapters on mobile and when reduced motion is enabled.
-- Full-screen keyboard-accessible navigation, native modal focus handling, Escape to close, and a motion control.
-- Direct telephone/email contact links, without an unconnected enquiry form.
+## Published content and photography
 
-The supplied KIMI / GRIDO1 reference informed the spring solver, loading handover, oversized type, layered photographic presentation, and scroll sequence. The racing content and helmet effects are reinterpreted for architecture rather than copied into this site. No racing assets or Three.js scene are included.
-
-## Verified content and imagery
-
-Project names, locations, descriptions, and photographs were sourced from Nakhsha's official portfolio:
+Verified against:
 
 - https://nakhsha.in/nakhsha-builders
 - https://nakhshabuilders.com/
-- https://nakhshabuilders.com/projects/iconic-resto-pub
-- https://nakhshabuilders.com/projects/cosmopolitan-club
+- The original project detail URLs recorded in `project-data.json`.
 
-The six selected projects are Mysore Union, Cosmopolitan Club, Iconic Resto Pub, MICA, Continental Inn, and Rahul Cafe. Summaries are paraphrased from those pages. The commercial-project milestone, founding year, and contact details come from nakhsha.in/nakhsha-builders. No price or availability claims are made.
+The collection includes **Mysore Union, Cosmopolitan Club, Continental Inn, Iconic Resto Pub, MICA, and Rahul Cafe**. Source photography is hosted within the HTML. Four projects have verified official YouTube films linked from their dialogs; projects without a verified direct film have no film button.
 
-The hero tower is a generated architectural concept, labeled on the website. It is not represented as a Nakhsha project. The geometric symbol is a design concept. Actual project photography is used in the project collection. Sources were accessed on 26 October 2026.
+Published company facts include establishment in 2015, the 75+ commercial-project milestone, and 150+ professionals across teams. Contact details come from Nakhsha’s commercial page. Areas, scope, status, sources, and video provenance are recorded in `project-data.json`. No prices, sale availability, or invented completion dates are claimed.
 
-Manrope and Cormorant Garamond are locally hosted under the SIL Open Font License; see `assets/OFL.txt` and `assets/EDITORIAL-OFL.txt`.
+The central tower is a generated **concept visualization**, labeled on the site, and is not represented as a built Nakhsha project. The company symbol is sourced from Nakhsha’s official site and recolored through a mask to fit the reference palette. Font licenses are in `assets/`; library licenses are in `vendor/`.
 
-## Validation
+## Validation and accessibility
 
-Chromium checks cover the loader, headline entrance, full-screen navigation, desktop project selection, detail dialogs, mobile chapters, motion toggle, reduced-motion presentation, image loading, and layouts at 375, 390, 768, and 1440 pixels with no horizontal overflow. The self-contained export is checked with all external asset requests blocked.
+Chromium validation covered:
+
+- Actual Three.js shader compilation/rendering, loader handover, and cursor reveal.
+- A run with all external network requests blocked: the full interactive site still renders.
+- Desktop sheet recession, the six-second drafting trace, and project timeline.
+- Layouts at 375×667, 390×844, 768×1024, 1280×720, 1440×1000, and 1920×1080, with no horizontal overflow.
+- Short-screen main-action reachability, mobile menu, keyboard Escape, project dialogs, and verified video/source links.
+- Reduced-motion presentation and a WebGL-disabled architectural still fallback.
+- No page errors or console errors in the normal interactive run.
+
+Text reveals retain a plain screen-reader copy; animated units and canvases are hidden from assistive technology. Native dialogs provide focus containment, Escape closing, and focus return. Motion can be disabled with the page control and follows the system preference. Visible failure notices preserve a useful still-image page when an interactive capability is unavailable.
