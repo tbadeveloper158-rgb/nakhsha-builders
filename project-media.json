@@ -1,0 +1,444 @@
+{
+  "verifiedAt": "2026-10-26",
+  "note": "Published gallery images retrieved read-only from original Nakhsha Builders project detail pages. Sources record exact URLs. Only size/encoding optimized locally; no scene edits. No self-hosted video was found in inspected project pages or current Nakhsha commercial HTML. Official YouTube films remain external links.",
+  "projects": {
+    "mysore-union": {
+      "name": "Mysore Union",
+      "page": "https://nakhshabuilders.com/projects/mysore-unionairy-cave",
+      "hero": "assets/mysore-union.webp",
+      "gallery": [
+        {
+          "path": "assets/project-gallery/mysore-union-1.webp",
+          "originalUrl": "https://framerusercontent.com/images/ebWb7eVTyKiOlCHeS4afrrjSgE.jpg?width=1616&height=1080",
+          "fetchedUrl": "https://framerusercontent.com/images/ebWb7eVTyKiOlCHeS4afrrjSgE.jpg?width=1616&height=1080&scale-down-to=2048",
+          "sourcePage": "https://nakhshabuilders.com/projects/mysore-unionairy-cave",
+          "originalSize": [
+            1616,
+            1080
+          ],
+          "size": [
+            1616,
+            1080
+          ],
+          "alt": "Mysore Union — published project gallery photograph 1",
+          "bytes": 192590
+        },
+        {
+          "path": "assets/project-gallery/mysore-union-2.webp",
+          "originalUrl": "https://framerusercontent.com/images/EQLibJhEdxAuXsMm00oTEx2Hs.jpg?width=1616&height=1080",
+          "fetchedUrl": "https://framerusercontent.com/images/EQLibJhEdxAuXsMm00oTEx2Hs.jpg?width=1616&height=1080&scale-down-to=2048",
+          "sourcePage": "https://nakhshabuilders.com/projects/mysore-unionairy-cave",
+          "originalSize": [
+            1616,
+            1080
+          ],
+          "size": [
+            1616,
+            1080
+          ],
+          "alt": "Mysore Union — published project gallery photograph 2",
+          "bytes": 157998
+        },
+        {
+          "path": "assets/project-gallery/mysore-union-3.webp",
+          "originalUrl": "https://framerusercontent.com/images/Ujrp1IL89utSwFZnKAahUpRBhcI.jpg?width=1616&height=1080",
+          "fetchedUrl": "https://framerusercontent.com/images/Ujrp1IL89utSwFZnKAahUpRBhcI.jpg?width=1616&height=1080&scale-down-to=2048",
+          "sourcePage": "https://nakhshabuilders.com/projects/mysore-unionairy-cave",
+          "originalSize": [
+            1616,
+            1080
+          ],
+          "size": [
+            1616,
+            1080
+          ],
+          "alt": "Mysore Union — published project gallery photograph 3",
+          "bytes": 263530
+        },
+        {
+          "path": "assets/project-gallery/mysore-union-4.webp",
+          "originalUrl": "https://framerusercontent.com/images/l9Z2Po8XpU2wo8ODuwNBgyBPx1E.jpg?width=1616&height=1080",
+          "fetchedUrl": "https://framerusercontent.com/images/l9Z2Po8XpU2wo8ODuwNBgyBPx1E.jpg?width=1616&height=1080&scale-down-to=2048",
+          "sourcePage": "https://nakhshabuilders.com/projects/mysore-unionairy-cave",
+          "originalSize": [
+            1080,
+            1616
+          ],
+          "size": [
+            936,
+            1400
+          ],
+          "alt": "Mysore Union — published project gallery photograph 4",
+          "bytes": 178506
+        }
+      ],
+      "film": "https://www.youtube.com/watch?v=0cG-bsOzaBk",
+      "selfHostedVideo": null
+    },
+    "cosmopolitan-club": {
+      "name": "Cosmopolitan Club",
+      "page": "https://nakhshabuilders.com/projects/cosmopolitan-club",
+      "hero": "assets/cosmopolitan-club.webp",
+      "gallery": [
+        {
+          "path": "assets/project-gallery/cosmopolitan-club-1.webp",
+          "originalUrl": "https://framerusercontent.com/images/s8SPcly0RaQgQAQOhxsiSAoCKw.jpg?width=6024&height=4024",
+          "fetchedUrl": "https://framerusercontent.com/images/s8SPcly0RaQgQAQOhxsiSAoCKw.jpg?width=6024&height=4024&scale-down-to=2048",
+          "sourcePage": "https://nakhshabuilders.com/projects/cosmopolitan-club",
+          "originalSize": [
+            2048,
+            1368
+          ],
+          "size": [
+            1800,
+            1202
+          ],
+          "alt": "Cosmopolitan Club — published project gallery photograph 1",
+          "bytes": 191608
+        },
+        {
+          "path": "assets/project-gallery/cosmopolitan-club-2.webp",
+          "originalUrl": "https://framerusercontent.com/images/gzfF6p05iSgPSajCMRZ9wCgCD3E.jpg?width=6024&height=4024",
+          "fetchedUrl": "https://framerusercontent.com/images/gzfF6p05iSgPSajCMRZ9wCgCD3E.jpg?width=6024&height=4024&scale-down-to=2048",
+          "sourcePage": "https://nakhshabuilders.com/projects/cosmopolitan-club",
+          "originalSize": [
+            2048,
+            1368
+          ],
+          "size": [
+            1800,
+            1202
+          ],
+          "alt": "Cosmopolitan Club — published project gallery photograph 2",
+          "bytes": 197288
+        },
+        {
+          "path": "assets/project-gallery/cosmopolitan-club-3.webp",
+          "originalUrl": "https://framerusercontent.com/images/A2xJnCHptKOXadOMLn5ZI2i856g.jpg?width=6024&height=4024",
+          "fetchedUrl": "https://framerusercontent.com/images/A2xJnCHptKOXadOMLn5ZI2i856g.jpg?width=6024&height=4024&scale-down-to=2048",
+          "sourcePage": "https://nakhshabuilders.com/projects/cosmopolitan-club",
+          "originalSize": [
+            2048,
+            1368
+          ],
+          "size": [
+            1800,
+            1202
+          ],
+          "alt": "Cosmopolitan Club — published project gallery photograph 3",
+          "bytes": 141072
+        },
+        {
+          "path": "assets/project-gallery/cosmopolitan-club-4.webp",
+          "originalUrl": "https://framerusercontent.com/images/0Ms0VCYU5V8kcCtWRpMYXqL2XI.jpg?width=6024&height=4024",
+          "fetchedUrl": "https://framerusercontent.com/images/0Ms0VCYU5V8kcCtWRpMYXqL2XI.jpg?width=6024&height=4024&scale-down-to=2048",
+          "sourcePage": "https://nakhshabuilders.com/projects/cosmopolitan-club",
+          "originalSize": [
+            2048,
+            1368
+          ],
+          "size": [
+            1800,
+            1202
+          ],
+          "alt": "Cosmopolitan Club — published project gallery photograph 4",
+          "bytes": 188410
+        }
+      ],
+      "film": "https://www.youtube.com/watch?v=hajUQ9trZvI",
+      "selfHostedVideo": null
+    },
+    "continental-inn": {
+      "name": "Continental Inn",
+      "page": "https://nakhshabuilders.com/projects/the-continental-inn",
+      "hero": "assets/continental-inn.webp",
+      "gallery": [
+        {
+          "path": "assets/project-gallery/continental-inn-1.webp",
+          "originalUrl": "https://framerusercontent.com/images/XxfZyaTqYAF3bFodVdfSgBqG0Y.jpg?width=6000&height=4000",
+          "fetchedUrl": "https://framerusercontent.com/images/XxfZyaTqYAF3bFodVdfSgBqG0Y.jpg?width=6000&height=4000&scale-down-to=2048",
+          "sourcePage": "https://nakhshabuilders.com/projects/the-continental-inn",
+          "originalSize": [
+            2048,
+            1365
+          ],
+          "size": [
+            1800,
+            1200
+          ],
+          "alt": "Continental Inn — published project gallery photograph 1",
+          "bytes": 233042
+        },
+        {
+          "path": "assets/project-gallery/continental-inn-2.webp",
+          "originalUrl": "https://framerusercontent.com/images/G0g6glEO27EsE1pgU6n8PEGq7c.jpg?width=6000&height=4000",
+          "fetchedUrl": "https://framerusercontent.com/images/G0g6glEO27EsE1pgU6n8PEGq7c.jpg?width=6000&height=4000&scale-down-to=2048",
+          "sourcePage": "https://nakhshabuilders.com/projects/the-continental-inn",
+          "originalSize": [
+            2048,
+            1365
+          ],
+          "size": [
+            1800,
+            1200
+          ],
+          "alt": "Continental Inn — published project gallery photograph 2",
+          "bytes": 135724
+        },
+        {
+          "path": "assets/project-gallery/continental-inn-3.webp",
+          "originalUrl": "https://framerusercontent.com/images/PONKq2mLMP6vPE7jMGdlapg.jpg?width=6000&height=4000",
+          "fetchedUrl": "https://framerusercontent.com/images/PONKq2mLMP6vPE7jMGdlapg.jpg?width=6000&height=4000&scale-down-to=2048",
+          "sourcePage": "https://nakhshabuilders.com/projects/the-continental-inn",
+          "originalSize": [
+            2048,
+            1365
+          ],
+          "size": [
+            1800,
+            1200
+          ],
+          "alt": "Continental Inn — published project gallery photograph 3",
+          "bytes": 114520
+        },
+        {
+          "path": "assets/project-gallery/continental-inn-4.webp",
+          "originalUrl": "https://framerusercontent.com/images/HaeA9U3hczJTihEfN50TNccs.jpg?width=6000&height=4000",
+          "fetchedUrl": "https://framerusercontent.com/images/HaeA9U3hczJTihEfN50TNccs.jpg?width=6000&height=4000&scale-down-to=2048",
+          "sourcePage": "https://nakhshabuilders.com/projects/the-continental-inn",
+          "originalSize": [
+            1365,
+            2048
+          ],
+          "size": [
+            933,
+            1400
+          ],
+          "alt": "Continental Inn — published project gallery photograph 4",
+          "bytes": 102692
+        }
+      ],
+      "film": "https://www.youtube.com/watch?v=Y46Ltfhg-Xk",
+      "selfHostedVideo": null
+    },
+    "iconic-resto-pub": {
+      "name": "Iconic Resto Pub",
+      "page": "https://nakhshabuilders.com/projects/iconic-resto-pub",
+      "hero": "assets/iconic-resto-pub.webp",
+      "gallery": [
+        {
+          "path": "assets/project-gallery/iconic-resto-pub-1.webp",
+          "originalUrl": "https://framerusercontent.com/images/LfcB1yrhPiim9jFnCszvJROHdg.jpg?width=960&height=480",
+          "fetchedUrl": "https://framerusercontent.com/images/LfcB1yrhPiim9jFnCszvJROHdg.jpg?width=960&height=480&scale-down-to=2048",
+          "sourcePage": "https://nakhshabuilders.com/projects/iconic-resto-pub",
+          "originalSize": [
+            960,
+            480
+          ],
+          "size": [
+            960,
+            480
+          ],
+          "alt": "Iconic Resto Pub — published project gallery photograph 1",
+          "bytes": 97170
+        },
+        {
+          "path": "assets/project-gallery/iconic-resto-pub-2.webp",
+          "originalUrl": "https://framerusercontent.com/images/8ppXT8j41hPE6Cv8ijT5ZSK1r5Y.jpg?width=1920&height=1080",
+          "fetchedUrl": "https://framerusercontent.com/images/8ppXT8j41hPE6Cv8ijT5ZSK1r5Y.jpg?width=1920&height=1080&scale-down-to=2048",
+          "sourcePage": "https://nakhshabuilders.com/projects/iconic-resto-pub",
+          "originalSize": [
+            1920,
+            1080
+          ],
+          "size": [
+            1800,
+            1013
+          ],
+          "alt": "Iconic Resto Pub — published project gallery photograph 2",
+          "bytes": 132546
+        },
+        {
+          "path": "assets/project-gallery/iconic-resto-pub-3.webp",
+          "originalUrl": "https://framerusercontent.com/images/h9NI3TgIWzISGsU7RWu8bZlZgg.jpg?width=1080&height=720",
+          "fetchedUrl": "https://framerusercontent.com/images/h9NI3TgIWzISGsU7RWu8bZlZgg.jpg?width=1080&height=720&scale-down-to=2048",
+          "sourcePage": "https://nakhshabuilders.com/projects/iconic-resto-pub",
+          "originalSize": [
+            1080,
+            720
+          ],
+          "size": [
+            1080,
+            720
+          ],
+          "alt": "Iconic Resto Pub — published project gallery photograph 3",
+          "bytes": 200124
+        },
+        {
+          "path": "assets/project-gallery/iconic-resto-pub-4.webp",
+          "originalUrl": "https://framerusercontent.com/images/2DW3jCnkDrWzf0TH6bfIQsI2eE.jpg?width=1532&height=1076",
+          "fetchedUrl": "https://framerusercontent.com/images/2DW3jCnkDrWzf0TH6bfIQsI2eE.jpg?width=1532&height=1076&scale-down-to=2048",
+          "sourcePage": "https://nakhshabuilders.com/projects/iconic-resto-pub",
+          "originalSize": [
+            1532,
+            1076
+          ],
+          "size": [
+            1532,
+            1076
+          ],
+          "alt": "Iconic Resto Pub — published project gallery photograph 4",
+          "bytes": 136296
+        }
+      ],
+      "film": null,
+      "selfHostedVideo": null
+    },
+    "mica": {
+      "name": "MICA",
+      "page": "https://nakhshabuilders.com/projects/mica",
+      "hero": "assets/mica.webp",
+      "gallery": [
+        {
+          "path": "assets/project-gallery/mica-1.webp",
+          "originalUrl": "https://framerusercontent.com/images/rb787RddJzh3SNJwqlvgklks1zU.jpg?width=1331&height=957",
+          "fetchedUrl": "https://framerusercontent.com/images/rb787RddJzh3SNJwqlvgklks1zU.jpg?width=1331&height=957&scale-down-to=2048",
+          "sourcePage": "https://nakhshabuilders.com/projects/mica",
+          "originalSize": [
+            1331,
+            957
+          ],
+          "size": [
+            1331,
+            957
+          ],
+          "alt": "MICA — published project gallery photograph 1",
+          "bytes": 145282
+        },
+        {
+          "path": "assets/project-gallery/mica-2.webp",
+          "originalUrl": "https://framerusercontent.com/images/nZBmwy8UXJ49cOdvkHNCCKX3m0.jpg?width=1384&height=1152",
+          "fetchedUrl": "https://framerusercontent.com/images/nZBmwy8UXJ49cOdvkHNCCKX3m0.jpg?width=1384&height=1152&scale-down-to=2048",
+          "sourcePage": "https://nakhshabuilders.com/projects/mica",
+          "originalSize": [
+            1384,
+            1152
+          ],
+          "size": [
+            1384,
+            1152
+          ],
+          "alt": "MICA — published project gallery photograph 2",
+          "bytes": 202576
+        },
+        {
+          "path": "assets/project-gallery/mica-3.webp",
+          "originalUrl": "https://framerusercontent.com/images/Tb9qedSMh8oFA7va8jc2a5Q4ijY.png?width=465&height=302",
+          "fetchedUrl": "https://framerusercontent.com/images/Tb9qedSMh8oFA7va8jc2a5Q4ijY.png?width=465&height=302&scale-down-to=2048",
+          "sourcePage": "https://nakhshabuilders.com/projects/mica",
+          "originalSize": [
+            465,
+            302
+          ],
+          "size": [
+            465,
+            302
+          ],
+          "alt": "MICA — published project gallery photograph 3",
+          "bytes": 38930
+        },
+        {
+          "path": "assets/project-gallery/mica-4.webp",
+          "originalUrl": "https://framerusercontent.com/images/A7x90RW0YiBriTFVSpBCdLOD9BM.png?width=461&height=300",
+          "fetchedUrl": "https://framerusercontent.com/images/A7x90RW0YiBriTFVSpBCdLOD9BM.png?width=461&height=300&scale-down-to=2048",
+          "sourcePage": "https://nakhshabuilders.com/projects/mica",
+          "originalSize": [
+            461,
+            300
+          ],
+          "size": [
+            461,
+            300
+          ],
+          "alt": "MICA — published project gallery photograph 4",
+          "bytes": 32924
+        }
+      ],
+      "film": "https://www.youtube.com/watch?v=wkAE-bg8avw",
+      "selfHostedVideo": null
+    },
+    "rahul-cafe": {
+      "name": "Rahul Cafe",
+      "page": "https://nakhshabuilders.com/projects/rahul-cafe",
+      "hero": "assets/rahul-cafe.webp",
+      "gallery": [
+        {
+          "path": "assets/project-gallery/rahul-cafe-1.webp",
+          "originalUrl": "https://framerusercontent.com/images/bbakziv7o46bl5VO7Fqn5r5JM.jpg?width=4000&height=6000",
+          "fetchedUrl": "https://framerusercontent.com/images/bbakziv7o46bl5VO7Fqn5r5JM.jpg?width=4000&height=6000&scale-down-to=2048",
+          "sourcePage": "https://nakhshabuilders.com/projects/rahul-cafe",
+          "originalSize": [
+            1365,
+            2048
+          ],
+          "size": [
+            933,
+            1400
+          ],
+          "alt": "Rahul Cafe — published project gallery photograph 1",
+          "bytes": 119730
+        },
+        {
+          "path": "assets/project-gallery/rahul-cafe-2.webp",
+          "originalUrl": "https://framerusercontent.com/images/ZH9H4YxZA84PE4yAWQNKRgLlki0.jpg?width=6000&height=4000",
+          "fetchedUrl": "https://framerusercontent.com/images/ZH9H4YxZA84PE4yAWQNKRgLlki0.jpg?width=6000&height=4000&scale-down-to=2048",
+          "sourcePage": "https://nakhshabuilders.com/projects/rahul-cafe",
+          "originalSize": [
+            2048,
+            1365
+          ],
+          "size": [
+            1800,
+            1200
+          ],
+          "alt": "Rahul Cafe — published project gallery photograph 2",
+          "bytes": 161896
+        },
+        {
+          "path": "assets/project-gallery/rahul-cafe-3.webp",
+          "originalUrl": "https://framerusercontent.com/images/aRxgfz39DoohAKeOqovPAWeKQro.jpg?width=4000&height=6000",
+          "fetchedUrl": "https://framerusercontent.com/images/aRxgfz39DoohAKeOqovPAWeKQro.jpg?width=4000&height=6000&scale-down-to=2048",
+          "sourcePage": "https://nakhshabuilders.com/projects/rahul-cafe",
+          "originalSize": [
+            1365,
+            2048
+          ],
+          "size": [
+            933,
+            1400
+          ],
+          "alt": "Rahul Cafe — published project gallery photograph 3",
+          "bytes": 97166
+        },
+        {
+          "path": "assets/project-gallery/rahul-cafe-4.webp",
+          "originalUrl": "https://framerusercontent.com/images/EwsdaL1oLOp6edVcHpJ7OFRmxY.jpg?width=6000&height=4000",
+          "fetchedUrl": "https://framerusercontent.com/images/EwsdaL1oLOp6edVcHpJ7OFRmxY.jpg?width=6000&height=4000&scale-down-to=2048",
+          "sourcePage": "https://nakhshabuilders.com/projects/rahul-cafe",
+          "originalSize": [
+            2048,
+            1365
+          ],
+          "size": [
+            1800,
+            1200
+          ],
+          "alt": "Rahul Cafe — published project gallery photograph 4",
+          "bytes": 166498
+        }
+      ],
+      "film": null,
+      "selfHostedVideo": null
+    }
+  }
+}

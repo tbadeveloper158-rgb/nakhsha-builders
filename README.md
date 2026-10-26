@@ -1,80 +1,80 @@
-# Nakhsha Builders — built for what’s next
+# Nakhsha — Spaces with presence
 
-A commercial-architecture adaptation of the supplied **KIMI / GRIDO1 Racing Systems** reference: near-white, black, cyan, Oswald and Space Grotesk, an interactive architectural subject, and five distinct scroll chapters.
+A warm, cinematic commercial-project website in **cream, beige, ivory, warm stone and bronze**, using the colour family on nakhsha.in. All project photography is from Nakhsha’s published work. No black panels, cyan, or blue interface accents.
 
-![Desktop architectural stage](docs/desktop-preview.png)
+![Cream and beige opening](docs/desktop-preview.png)
 
-## Open the website
+## Run the complete website and contact form
 
-`index.html` is a single self-contained HTML file. Images, fonts, Three.js 0.185.0, and Lenis 1.3.26 are embedded. There are **no runtime downloads, package installation, framework, or build step** needed to view it. `standalone.html` is an identical copy retained for convenience.
-
-To serve the page locally:
+Python 3.10+; no package dependencies:
 
 ```sh
-python -m http.server 3000 --bind 0.0.0.0
+python server.py --port 3000
 ```
 
-The page can be hosted on any static HTML host. This repository does not imply that a public website has been deployed.
+This serves the prebuilt website and the consultation API from the same origin. Images, fonts, Three.js and Lenis are embedded into `index.html`; no frontend build or CDN request is required.
 
-## How the reference is used
+`standalone.html` is an identical self-contained frontend. A static-only host cannot run the verified consultation API; its form switches to an explicitly labelled **Prepare email enquiry** action and an official-form link. It never claims an email draft has been sent. Run/deploy `server.py` for direct, verified submissions. The site has not been deployed to a public domain by this repository update.
 
-| Supplied reference | Nakhsha implementation |
-| --- | --- |
-| Light hero, condensed title, identity rail and bracketed panels | Architectural stage, Nakhsha identity, commercial metadata, featured project and published milestones |
-| Helmet burn, cursor trail and wireframe scan | Commercial tower texture with a cyan crown-to-base structural reveal, shallow parallax, cursor-trail blueprint reveal and periodic structural scan |
-| One spring/ticker engine and smooth scrolling | Mass-one spring solver with 1ms substeps and capped frame time; all scenes and Lenis driven by one ticker |
-| First two pinned sheets recede under the next layer | Hero and delivery sheets scale to 0.9 and darken to 55%; too-tall screens use normal flow so controls remain reachable |
-| Chequer dissolve into dark instrument map | Deterministic chequer seam, halftone architectural floor plan, six-second cyan trace, four milestones, hub pings and cursor reticle |
-| Stepped-corner photographic timeline | Six published Nakhsha projects, alternate photo plates, center progress thread, rotating marker, parallax and pointer dimming |
-| Light paddock / calendar | Light process chapter, architectural subject, four connected delivery stages |
-| Cyan-edged dark sign-off | 16px cyan edge, inset black panel, contour field, architectural figure and letter-revealed navigation |
+## A different way to explore the projects
 
-The fonts, palette, section hierarchy, framing, geometry, and motion system follow the supplied reference. The racing driver, helmet, race calendar, and racing copy are replaced with commercial architecture and Nakhsha information. The tower is an architectural image with WebGL shader effects, not a navigable volumetric building model.
+- A moving architectural opening using real Cosmopolitan Club, Continental Inn and Rahul Cafe photography, a refracted WebGL photo transition, subtle pointer depth and a floating detail study.
+- A scroll-led project cinema on desktop, replacing the old static project timeline. Six projects dissolve through a large photographic stage, with project navigation, progress and a direct exploration control.
+- An interactive project carousel on phones and shorter screens, with swipe, previous/next and thumbnail controls.
+- Five photographs per project: 30 original published images in total, including 24 additional gallery photographs. Gallery thumbnails, arrow keys, swipe and next/previous controls all work.
+- Four official project films, linked only where the published video has been verified.
+- A process accordion that changes its photographic study, letter/word entrances, parallax and ambient movement. A motion control and system reduced-motion preference preserve a calmer, fully usable version.
+- Full-screen navigation and a warm consultation section.
 
-## Screenshots
+Photographs retain their actual colours; sky, water and materials in project photography are not interface accents.
 
-- [Desktop opening](docs/desktop-preview.png)
-- [Phone opening](docs/mobile-preview.png)
-- [Architectural instrument stage](docs/blueprint-preview.png)
-- [Project timeline](docs/projects-preview.png)
-- [Closing chapter](docs/footer-preview.png)
+## Consultation flow
 
-## Edit and regenerate
+The form collects name, phone, email, location, project type, budget, message and contact consent, matching the published Nakhsha form.
 
-Editable authoring files are in `src/`; project content and provenance are in `project-data.json`. The contour and drafting helpers are in `scripts/` and library sources/licenses in `vendor/`.
+The companion backend maintains a separate official PHP session for each browser. It fetches current public verification tokens server-side, relays **user-requested** WhatsApp OTP send/verify actions, and submits to the official consultation handler only after successful mobile verification and human confirmation. Session tokens and cookies stay in server memory and are never embedded in HTML or returned to the browser.
 
-After editing, regenerate both self-contained HTML files:
+There are no automatic OTP sends or automatic enquiries. Server validation, same-origin checks, bounded payloads, session expiry, resend/verification limits and duplicate protection are included. Success is shown only after the official handler returns its recognised delivery receipt; an uncertain result is not reported as success or blindly retried.
+
+The official PHP interface is public but undocumented and may change; failures provide a visible alternative instead of claiming delivery. For HTTPS hosting, use a reverse proxy with `X-Forwarded-Proto: https` or set `NAKHSHA_SECURE_COOKIE=1` so the session cookie is Secure. The Python process must remain running for direct submissions.
+
+**Verification performed:** live read-only bootstrap against the official site; 10 mocked backend tests; actual-page mocked mobile tests covering consent, validation, OTP errors/recovery, human confirmation, confirmed/uncertain delivery and static fallback. **No real OTP or enquiry was sent during development**, so live message delivery is not claimed as tested.
+
+## Authoring
+
+- `src/index.template.html`, `src/site.css`, `src/site.js`: editable frontend.
+- `scripts/contact-form.js`: progressive verified-form integration.
+- `project-data.json`, `project-media.json`: verified project information, gallery paths, film links and original source URLs.
+- `server.py`: static serving and session-preserving consultation bridge.
+- `tests/test_contact.py`: mocked server tests; never sends production messages.
+
+Regenerate the delivered HTML after editing:
 
 ```sh
 python scripts/export.py
 ```
 
-Only Python’s standard library is required. Three.js and Lenis are embedded through the import map. The vendored libraries were extracted from the official npm tarballs after checking their registry SHA512 integrity. TLS and package verification were retained.
+Run backend tests:
 
-## Published content and photography
+```sh
+python -m unittest discover -s tests -v
+```
 
-Verified against:
+## Sources and licensing
+
+Project content and photographs were retrieved from:
 
 - https://nakhsha.in/nakhsha-builders
-- https://nakhshabuilders.com/
-- The original project detail URLs recorded in `project-data.json`.
+- https://nakhshabuilders.com/ and its original project detail pages, recorded individually in the JSON files.
 
-The collection includes **Mysore Union, Cosmopolitan Club, Continental Inn, Iconic Resto Pub, MICA, and Rahul Cafe**. Source photography is hosted within the HTML. Four projects have verified official YouTube films linked from their dialogs; projects without a verified direct film have no film button.
+The six projects are Mysore Union, Cosmopolitan Club, Continental Inn, Iconic Resto Pub, MICA and Rahul Cafe. No prices, sale availability or invented completion dates are claimed. The current design uses actual project photography throughout; it does not present generated buildings as Nakhsha projects.
 
-Published company facts include establishment in 2015, the 75+ commercial-project milestone, and 150+ professionals across teams. Contact details come from Nakhsha’s commercial page. Areas, scope, status, sources, and video provenance are recorded in `project-data.json`. No prices, sale availability, or invented completion dates are claimed.
+The official Nakhsha symbol is colour-masked to the warm palette. Plus Jakarta Sans and Cormorant Garamond are locally included under the SIL Open Font License (`assets/`). Three.js 0.185.0 and Lenis 1.3.26 retain their MIT notices in `vendor/`; vendored code was extracted from SHA512-verified npm packages.
 
-The central tower is a generated **concept visualization**, labeled on the site, and is not represented as a built Nakhsha project. The company symbol is sourced from Nakhsha’s official site and recolored through a mask to fit the reference palette. Font licenses are in `assets/`; library licenses are in `vendor/`.
+## Previews
 
-## Validation and accessibility
+[Desktop](docs/desktop-preview.png) · [Phone](docs/mobile-preview.png) · [Project cinema](docs/projects-preview.png) · [Gallery](docs/gallery-preview.png) · [Consultation form](docs/contact-preview.png)
 
-Chromium validation covered:
+## Frontend validation
 
-- Actual Three.js shader compilation/rendering, loader handover, and cursor reveal.
-- A run with all external network requests blocked: the full interactive site still renders.
-- Desktop sheet recession, the six-second drafting trace, and project timeline.
-- Layouts at 375×667, 390×844, 768×1024, 1280×720, 1440×1000, and 1920×1080, with no horizontal overflow.
-- Short-screen main-action reachability, mobile menu, keyboard Escape, project dialogs, and verified video/source links.
-- Reduced-motion presentation and a WebGL-disabled architectural still fallback.
-- No page errors or console errors in the normal interactive run.
-
-Text reveals retain a plain screen-reader copy; animated units and canvases are hidden from assistive technology. Native dialogs provide focus containment, Escape closing, and focus return. Motion can be disabled with the page control and follows the system preference. Visible failure notices preserve a useful still-image page when an interactive capability is unavailable.
+Chromium checks passed for both WebGL scenes, hero controls, six project selectors, five-photo galleries, gallery keyboard/thumbnail controls, process accordion, mobile navigation and project browsing, reduced-motion controls, and the embedded standalone gallery assets. Layouts were checked at 375×667, 390×844, 768×1024, 1280×720, 1440×1000 and 1920×1080 with no horizontal overflow. Real touch-phone tests compare scroll width against the layout viewport, and mobile inputs use 16px text to prevent focus zoom.
