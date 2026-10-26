@@ -1,54 +1,47 @@
-# Nakhsha Builders
+# Nakhsha — Built beyond the ordinary
 
-A responsive architectural website built with HTML, CSS, and JavaScript. No dependencies or build step.
+A cinematic commercial architecture website. Deep forest, muted gold, editorial serif typography, and immersive project photography. Built with native HTML, CSS, JavaScript, SVG, and locally hosted fonts. No build step or runtime dependencies.
+
+![Desktop preview](docs/desktop-preview.png)
 
 ## Run
-
-From `/workspace/nakhsha-builders`:
 
 ```sh
 python -m http.server 3000 --bind 0.0.0.0
 ```
 
-`index.html` is the editable site, with locally hosted assets. `standalone.html` is the self-contained export, including all photographs and the font. It can also be opened directly. Regenerate the export after editing the site or assets with `python scripts/export.py`.
+Open the server in your browser. `index.html` is the editable site. `standalone.html` embeds the fonts and photographs for a self-contained version. Regenerate it after edits:
 
-## Content and photography
+```sh
+python scripts/export.py
+```
 
-Project names, locations, scope summaries, and photographs were retrieved from these official pages on 26 October 2026:
+## Experience
+
+- Full-screen architectural opening with subtle ambient movement and a building-mark loader.
+- Spring-driven, staggered headline reveals and editorial scroll reveals.
+- A pinned, full-screen project sequence on desktop, with spring-driven photographic dissolves, subtle image movement, project navigation, and detail dialogs.
+- Individual project chapters on mobile and when reduced motion is enabled.
+- Full-screen keyboard-accessible navigation, native modal focus handling, Escape to close, and a motion control.
+- Direct telephone/email contact links, without an unconnected enquiry form.
+
+The supplied KIMI / GRIDO1 reference informed the spring solver, loading handover, oversized type, layered photographic presentation, and scroll sequence. The racing content and helmet effects are reinterpreted for architecture rather than copied into this site. No racing assets or Three.js scene are included.
+
+## Verified content and imagery
+
+Project names, locations, descriptions, and photographs were sourced from Nakhsha's official portfolio:
 
 - https://nakhsha.in/nakhsha-builders
 - https://nakhshabuilders.com/
 - https://nakhshabuilders.com/projects/iconic-resto-pub
 - https://nakhshabuilders.com/projects/cosmopolitan-club
 
-The six selected projects are Mysore Union, Cosmopolitan Club, Iconic Resto Pub, MICA, Continental Inn, and Rahul Cafe. Project details are paraphrased from the official sites. No prices or availability are claimed. The dramatic tower in the hero is an AI-generated architectural concept, labeled on the page, and is not a Nakhsha project. The geometric brand symbol is a design concept.
+The six selected projects are Mysore Union, Cosmopolitan Club, Iconic Resto Pub, MICA, Continental Inn, and Rahul Cafe. Summaries are paraphrased from those pages. The commercial-project milestone, founding year, and contact details come from nakhsha.in/nakhsha-builders. No price or availability claims are made.
 
-The contact dialog uses the phone number, email, and address published on nakhsha.in. Calls and emails use native links. No enquiry submission or backend integration is implied.
+The hero tower is a generated architectural concept, labeled on the website. It is not represented as a Nakhsha project. The geometric symbol is a design concept. Actual project photography is used in the project collection. Sources were accessed on 26 October 2026.
 
-The locally hosted Manrope variable font is distributed under the SIL Open Font License; see `assets/OFL.txt`.
+Manrope and Cormorant Garamond are locally hosted under the SIL Open Font License; see `assets/OFL.txt` and `assets/EDITORIAL-OFL.txt`.
 
-## Interaction and accessibility
+## Validation
 
-- Hero perspective controls, category filtering, and project detail dialogs.
-- Mobile navigation with expanded-state reporting.
-- Native modal keyboard/focus handling, Escape to dismiss, keyboard focus styles.
-- Reduced-motion support, lazy-loaded project photos, and no external runtime requests.
-
-Browser validation: Chromium at widths of 375, 390, 768, and 1440 pixels; verified image loading, navigation, filters, carousel, project/contact dialogs, reduced-motion visibility, and no horizontal overflow.
-
-## Adaptation of the supplied KIMI / GRIDO1 prompt
-
-The racing reference is reinterpreted for commercial architecture, using the same motion ideas with Nakhsha content and warm ivory, charcoal, and copper art direction:
-
-- Architectural loading veil and progress meter, gated on hero image and font readiness with a fallback.
-- One animation ticker with a mass-one damped spring solver and 1ms integration.
-- Staggered headline word reveals, scroll-entry reveals, and desktop sticky hero recession to 90% scale with a darkening overlay.
-- Animated contour fields, cursor-revealed structural linework, and blueprint tracing in place of the helmet and circuit.
-- Staggered portfolio photography and a four-stage delivery roadmap with a traced progress thread.
-- Reduced-motion and touch layouts, without racing assets or racing copy.
-
-This is an architectural adaptation, not an exact reproduction of the racing site's WebGL helmet scene. It uses native canvas/SVG and JavaScript, with no Three.js, remote modules, bundler, or runtime dependency.
-
-## ZIP contents
-
-`index.html`, `standalone.html`, local imagery/font and font license in `assets/`, this README, and `scripts/export.py`. No Git metadata, credentials, or environment files are packaged.
+Chromium checks cover the loader, headline entrance, full-screen navigation, desktop project selection, detail dialogs, mobile chapters, motion toggle, reduced-motion presentation, image loading, and layouts at 375, 390, 768, and 1440 pixels with no horizontal overflow. The self-contained export is checked with all external asset requests blocked.
